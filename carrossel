@@ -1,0 +1,12 @@
+          <q-carousel
+            swipeable
+            animated
+            v-model="slide"
+            thumbnails
+            infinite
+            :autoplay="autoplay"
+          >
+            <q-carousel-slide :name="1" img-src="~/assets/car1.jpg" />
+            <q-carousel-slide :name="2" img-src="~/assets/car2.jpg" />
+            <q-carousel-slide :name="3" img-src="~/assets/car3.jpg" />
+          </q-carousel>
