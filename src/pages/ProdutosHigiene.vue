@@ -1,29 +1,43 @@
 <template>
-  <q-page style="padding-top: 20px">
-    <div class="q-pa-md row items-start q-gutter-md col-md-6 justify-between text-center">
-      <q-card class="my-card">
-        <img src="~/assets/p1.jpg">
+  <div class="q-pa-md">
+    <div class="text-h4 glossy bg-white text-center">Produtos - Higiene</div>
+    <div class="q-pa-md justify-evenly row">
+      <q-card class="my-card col-sm-3" style="background-color: white" v-for="n in 10" :key="n">
+        <img
+          :ratio="1"
+          src="~/assets/p1.jpg"
+        >
 
         <q-card-section>
-          <div class="text-h6">MASSAGEADORA</div>
-          <div class="text-subtitle2">REF 6004 – ESCOVA</div>
+          <div class="text-h6">{{ nome }}</div>
+          <div class="text-caption">{{ referencia }}</div>
         </q-card-section>
 
         <q-card-section class="q-pt-none">
-          Massageador de gengiva, em 100% silicone , macio e confortável. Que além de ajudar na higienização, massageia a gengiva causando o bem estar e estimula o aprendizado do bebê.
+          {{ descricao }}
         </q-card-section>
+
       </q-card>
     </div>
-  </q-page>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'PageProdutos',
+  name: 'PageProdutosHigiene',
   data () {
     return {
-      tab: 'food'
+      nome: 'MASSAGEADORA',
+      referencia: 'REF 6004 – ESCOVA',
+      descricao: 'Massageador de gengiva, em 100% silicone, macio e confortável. Que além de ajudar na higienização, massageia a gengiva causando o bem estar e estimula o aprendizado do bebê.'
     }
   }
 }
 </script>
+
+<style scoped>
+  .my-card {
+    margin: 0  1px  20px  0;
+    padding: 1px;
+  }
+</style>

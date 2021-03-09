@@ -19,11 +19,9 @@
 
 <script>
 export default {
-  name: 'PageProdutos',
+  name: 'PageProdutosAcessorios',
   data () {
-    return {
-      tab: 'food'
-    }
+    return {}
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <q-layout class="q-pa-md bg-image">
     <q-toolbar class="justify-center">
-      <img alt="Logo" src="~assets/logo.png" width="300px">
+      <img alt="Logo" src="~assets/logo.png" width="250px">
     </q-toolbar>
 
     <q-toolbar class="bg-primary glossy text-white q-my-md shadow-2">
@@ -35,9 +35,25 @@
       <q-separator dark vertical />
       <q-btn stretch flat label="Fale Conosco" icon="phone" @click="$router.replace('/fale-conosco')" />
     </q-toolbar>
+
     <q-page-container>
       <router-view />
+      <q-page-sticky position="bottom-right" :offset="[18, 18]">
+          <q-fab
+            glossy
+            icon="share"
+            color="primary"
+            direction="up"
+            v-model="fab"
+          >
+            <q-fab-action color="orange" @click="onClick" icon="mail" />
+            <q-fab-action glossy color="green" @click="onClick" icon="room" />
+            <q-fab-action glossy color="primary" @click="onClick" icon="facebook" />
+            <q-fab-action color="red" @click="onClick" icon="phone" />
+          </q-fab>
+        </q-page-sticky>
     </q-page-container>
+
   </q-layout>
 </template>
 
@@ -46,7 +62,26 @@
 export default {
   name: 'MainLayout',
   data () {
-    return {}
+    return {
+      fab: true
+    }
+  },
+  methods: {
+    onClick () {
+      console.log(this.fab)
+    }
   }
 }
 </script>
+
+<style>
+
+  .bg-image {
+    background-image: url('~assets/bg2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+</style>
