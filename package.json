@@ -2,7 +2,7 @@
   "name": "hazime",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "Hazime App",
+  "productName": "Hazime/Sonne",
   "author": "Andrê Reges <dreeh.silva@hotmail.com>",
   "private": true,
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "quasar": "^1.15.5",
     "vue-i18n": "^8.0.0"

@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-md">
-    <div class="text-h4 glossy bg-white text-center">Produtos - Higiene</div>
+  <div class="q-p-md">
+    <div class="text-h3 text-center">Produtos - Higiene</div>
     <div class="q-pa-md justify-evenly row">
       <q-card class="my-card col-sm-3" style="background-color: white" v-for="n in 10" :key="n">
         <img
@@ -39,5 +39,9 @@ export default {
   .my-card {
     margin: 0  1px  20px  0;
     padding: 1px;
+  }
+  .my-card:hover {
+    transform: scale(1.01);
+    box-shadow: 5px 10px #d3aad2;
   }
 </style>

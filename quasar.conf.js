@@ -118,7 +118,7 @@ module.exports = function (/* ctx */) {
       workboxOptions: {}, // only for GenerateSW
       manifest: {
         name: 'Hazime App',
-        short_name: 'Hazime App',
+        short_name: 'Hazime',
         description: 'A Quasar Framework app',
         display: 'standalone',
         orientation: 'portrait',
