@@ -18,33 +18,35 @@
 
         <q-space />
 
-        <q-btn flat>
-          <q-item-label>
-            <img src="~/assets/icons/product-lauch.svg" class="img-icon" />
-          </q-item-label>
-          <q-item-label>
-            Produtos
-          </q-item-label>
-          <q-btn-dropdown>
-            <q-list>
-              <q-item clickable v-close-popup tabindex="0" @click="$router.replace('/produtos/alimentacao')" >
+        <q-btn-dropdown flat dropdown-icon="change_history">
+
+          <template v-slot:label>
+            <div class="row items-center no-wrap">
+              <img src="~/assets/icons/product-lauch.svg" class="img-icon" />
+              <div class="text-center">
+                Produtos
+              </div>
+            </div>
+          </template>
+
+          <q-list>
+              <q-item clickable v-close-popup @click="$router.replace('/produtos/alimentacao')" >
                 <q-item-section>
                   <q-item-label>Alimentação</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item clickable v-close-popup tabindex="0" @click="$router.replace('/produtos/higiene')" >
+              <q-item clickable v-close-popup @click="$router.replace('/produtos/higiene')" >
                 <q-item-section>
                   <q-item-label>Higiene</q-item-label>
                 </q-item-section>
               </q-item>
-              <q-item clickable v-close-popup tabindex="0" @click="$router.replace('/produtos/acessorios')" >
+              <q-item clickable v-close-popup @click="$router.replace('/produtos/acessorios')" >
                 <q-item-section>
                   <q-item-label>Acessórios</q-item-label>
                 </q-item-section>
               </q-item>
-            </q-list>
-          </q-btn-dropdown>
-        </q-btn>
+          </q-list>
+        </q-btn-dropdown>
 
         <q-separator dark vertical v-show="this.$q.platform.is.desktop" />
 
@@ -106,19 +108,14 @@
           color="purple"
           direction="up"
         >
-          <q-fab-action flat clickable tag="a" target="_blank" href="https://wa.me/5511997064004?text=Eu%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Hazime">
-            <q-item-label>
-              <img src="~/assets/icons/whatsapp.png" class="img-icon" />
-            </q-item-label>
-          </q-fab-action>
           <q-fab-action flat clickable tag="a" target="_blank" href="https://www.instagram.com/sonne.baby2021/">
             <q-item-label>
               <img src="~/assets/icons/instagram.png" class="img-icon" />
             </q-item-label>
           </q-fab-action>
-          <q-fab-action flat clickable tag="a" target="_blank" href="">
+          <q-fab-action flat clickable tag="a" target="_blank" href="https://wa.me/5511997064004?text=Eu%20tenho%20interesse%20em%20saber%20mais%20sobre%20a%20Hazime">
             <q-item-label>
-              <img src="~/assets/icons/facebook.png" class="img-icon" />
+              <img src="~/assets/icons/whatsapp.png" class="img-icon" />
             </q-item-label>
           </q-fab-action>
         </q-fab>
