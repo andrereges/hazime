@@ -21,9 +21,17 @@
       />
 
       <button-header
-        v-for="item in itens"
-        :key="item.title"
-        v-bind="item"
+        title="aboutUs"
+        iconName='information.svg'
+        link='/about-us'
+        show="desktop"
+      />
+
+      <button-header
+        title="contact"
+        iconName='customer-care.svg'
+        link='/contact'
+        show="desktop"
       />
 
       <q-btn-toggle 
@@ -73,27 +81,11 @@
 import ButtonDropdownHeader from './ButtonDropdownHeader.vue'
 import ButtonHeader from './ButtonHeader.vue'
 
-const itens = [
-  {
-    title: 'aboutUs',
-    iconName: 'information.svg',
-    link: '/about-us',
-    show: 'desktop'
-  },
-  {
-    title: 'contact',
-    iconName: 'customer-care.svg',
-    link: '/contact',
-    show: 'desktop'
-  }
-]
-
 export default {
   name: 'Header',
   components: { ButtonHeader, ButtonDropdownHeader },
   data () {
     return {
-      itens: itens,
       isDesktop: this.$q.platform.is.desktop,
       locale: process.env.IDIOM
     }
@@ -118,8 +110,5 @@ export default {
     background-image: url('~assets/background/bg.jpg');
     background-repeat: no-repeat;
     padding-top: 20px;
-  }
-  .uppercase {
-    text-transform: uppercase;
   }
 </style>

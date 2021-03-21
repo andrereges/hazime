@@ -14,7 +14,7 @@
       </div>
     </template>
 
-    <q-list>
+    <q-list class="uppercase">
         <q-item clickable v-close-popup @click="onClick('all')" >
           <q-item-section>
             <q-item-label>{{ $t('all') }}</q-item-label>

@@ -44,4 +44,8 @@ export default {
     height: 20px;
   }
 
+  .uppercase {
+    text-transform: uppercase;
+  }
+
 </style>

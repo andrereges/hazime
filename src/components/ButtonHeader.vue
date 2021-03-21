@@ -3,7 +3,7 @@
     <q-item-label>
       <img :src="getIcon" class="img-icon" />
     </q-item-label>
-    <q-item-label>
+    <q-item-label class="uppercase">
       {{ $t(title) }}
     </q-item-label>
   </q-btn>
