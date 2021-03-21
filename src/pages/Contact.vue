@@ -3,7 +3,7 @@
     <div class="row justify-center">
       <q-card class="my-card col-12">
         <q-card-section>
-          <q-form @submit="onSubmit" class="q-gutter-md">
+          <q-form @submit.prevent.stop="onSubmit" class="q-gutter-md">
             <div class="text-h4">{{ $t('contact') }}</div>
             <div class="text-caption">{{ $t('formContactMessage') }}</div>
 
@@ -57,7 +57,16 @@
             />
 
             <q-card-actions>
-              <q-btn glossy :label="this.$t('send')" color="green" class="full-width" type="submit" />
+              <q-btn
+                glossy
+                color="green"
+                class="full-width"
+                :label="this.$t('send')"
+                :type="type"
+                target="_blank"
+                :href="'mailto:' + sendEmail"
+                :disable="!disableButton"
+              />
             </q-card-actions>
 
           </q-form>
@@ -124,8 +133,38 @@ export default {
       message: ''
     }
   },
+  computed: {
+    type () {
+      if (this.subject && this.name && this.email && this.message) {
+        return 'a'
+      }
+
+      return ''
+    },
+    disableButton () {
+      if (this.subject && this.name && this.email && this.message) {
+        return true
+      }
+
+      return false
+    },
+    sendEmail () {
+      return `
+        ${process.env.EMAIL}
+        ?subject=${this.subject}
+        &body=<p><b>Nome:</b> ${this.name}</p>
+        <p><b>Telefone:</b> ${this.phone}</p>
+        <p><b>Email:</b> ${this.email}</p>
+        <p><b>Mensagem:</b></p>
+        <p>${this.message}</p>
+        <br><br>
+        <p><b>Site: ${window.location.origin}</b></p>`
+    }
+  },
   methods: {
-    onSubmit (evt) {}
+    onSubmit () {
+      console.log('Form Subimitted')
+    }
   }
 }
 </script>

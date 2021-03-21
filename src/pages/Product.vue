@@ -13,51 +13,11 @@
 </template>
 
 <script>
+
 import ProductCard from 'src/components/ProductCard.vue'
-
-const foodProducts = [
-  {
-    id: 1,
-    name: 'Kit Alimentação',
-    referencia: 'REF 5601',
-    description: 'Kit alimentação para seu bebê.',
-    image: 'p2.jpg'
-  }
-]
-
-const hygieneProducts = [
-  {
-    id: 2,
-    name: 'Massageadora',
-    referencia: 'REF 6004',
-    description: 'Massageador de gengiva, em 100% silicone, macio e confortável. Que além de ajudar na higienização, massageia a gengiva causando o bem estar e estimula o aprendizado do bebê.',
-    image: 'p1.jpg'
-  }
-]
-
-const acessoryProducts = [
-  {
-    id: 3,
-    name: 'Escova e Pente',
-    referencia: 'REF 6600',
-    description: 'Escova e pente para seu bebê.',
-    image: 'p3.jpg'
-  },
-  {
-    id: 4,
-    name: 'Prendedor de Chupeta',
-    referencia: 'REF 5603',
-    description: 'Prendedor de chupeta branco e rosa.',
-    image: 'p5.jpg'
-  },
-  {
-    id: 5,
-    name: 'Kit Banho(Escova, Pente, Saboneteira e Prendedor)',
-    referencia: 'REF 6601',
-    description: 'Kit banho com vários itens.',
-    image: 'p4.jpg'
-  }
-]
+import food from '../assets/products-json/food'
+import hygiene from '../assets/products-json/hygiene'
+import accessories from '../assets/products-json/accessories'
 
 export default {
   components: { ProductCard },
@@ -70,29 +30,29 @@ export default {
   },
   watch: {
     '$route.query.type': function () {
-      this.updateProduct()
+      this.getProducts()
     }
   },
   created () {
-    this.updateProduct()
+    this.getProducts()
   },
   methods: {
-    updateProduct () {
+    getProducts () {
       this.products = []
       this.title = this.$route.query.type
 
       switch (this.title) {
         case 'food':
-          this.products = foodProducts
+          this.products = food
           break
         case 'hygiene':
-          this.products = hygieneProducts
+          this.products = hygiene
           break
         case 'accessories':
-          this.products = acessoryProducts
+          this.products = accessories
           break
         default:
-          this.products = foodProducts.concat(hygieneProducts).concat(acessoryProducts)
+          this.products = food.concat(hygiene).concat(accessories)
           break
       }
     }

@@ -7,10 +7,9 @@
 
       <router-view />
 
-      <button-float v-show="this.$q.platform.is.mobile" />
-
-      <Footer />
     </q-page-container>
+
+    <Footer />
 
   </q-layout>
 </template>
@@ -18,12 +17,11 @@
 <script>
 
 import Header from 'src/components/Header.vue'
-import ButtonFloat from 'src/components/ButtonFloat.vue'
 import Footer from 'src/components/Footer.vue'
 
 export default {
   name: 'MainLayout',
-  components: { Header, ButtonFloat, Footer }
+  components: { Header, Footer }
 }
 </script>
 

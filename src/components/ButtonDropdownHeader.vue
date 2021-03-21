@@ -1,5 +1,9 @@
 <template>
-  <q-btn-dropdown flat dropdown-icon="change_history">
+  <q-btn-dropdown
+    flat
+    dropdown-icon="change_history"
+    content-class="bg-purple text-white"
+  >
 
     <template v-slot:label>
       <div class="row items-center no-wrap">

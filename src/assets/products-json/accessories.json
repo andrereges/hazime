@@ -1,0 +1,23 @@
+[
+  {
+    "id": 3,
+    "name": "Escova e Pente",
+    "referencia": "REF 6600",
+    "description": "Escova e pente para seu bebê.",
+    "image": "p3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Prendedor de Chupeta",
+    "referencia": "REF 5603",
+    "description": "Prendedor de chupeta branco e rosa.",
+    "image": "p5.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Kit Banho(Escova, Pente, Saboneteira e Prendedor)",
+    "referencia": "REF 6601",
+    "description": "Kit banho com vários itens.",
+    "image": "p4.jpg"
+  }
+]

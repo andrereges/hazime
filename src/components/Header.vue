@@ -34,8 +34,35 @@
         @input="setLocale"
         :options="[{ label: 'Pt', value: 'pt-br'},
                   { label: 'En', value: 'en-us'}]" 
-        v-show="this.$q.platform.is.desktop"
+        v-show="false"
       />
+
+      <q-btn flat icon="menu" v-show="this.$q.platform.is.mobile">
+        <q-menu
+          transition-show="jump-down"
+          transition-hide="jump-up"
+          content-class="bg-purple text-white"
+          auto-close
+        >
+          <q-list>
+
+            <q-item clickable @click="onClick('/about-us')">
+              <div class="row no-wrap q-pa-md">
+                <q-img src="~/assets/icons/information.svg" class="img-icon col-6" />
+                <span class="col-6 uppercase">{{ $t('aboutUs') }}</span>
+              </div>
+            </q-item>
+
+            <q-item clickable @click="onClick('/contact')">
+              <div class="row no-wrap q-pa-md">
+                <q-img src="~/assets/icons/customer-care.svg" class="img-icon col-6" />
+                <span class="col-6 uppercase">{{ $t('contact') }}</span>
+              </div>
+            </q-item>
+
+          </q-list>
+        </q-menu>
+      </q-btn>
 
     </q-toolbar>
 
@@ -77,6 +104,9 @@ export default {
       import(`quasar/lang/${locale}`).then(({ default: messages }) => {
         this.$q.lang.set(messages)
       })
+    },
+    onClick (link) {
+      this.$router.replace(link)
     }
   }
 
@@ -88,5 +118,8 @@ export default {
     background-image: url('~assets/background/bg.jpg');
     background-repeat: no-repeat;
     padding-top: 20px;
+  }
+  .uppercase {
+    text-transform: uppercase;
   }
 </style>
