@@ -1,7 +1,22 @@
-// This is just an example,
-// so you can safely delete all default props below
-
 export default {
-  failed: 'Action failed',
-  success: 'Action was successful'
+  home: 'Home',
+  product: 'Product',
+  products: 'Products',
+  aboutUs: 'About Us',
+  contact: 'Contact',
+  formContactMessage: 'Fill out the form below and we will get back to you as soon as possible.',
+  fullName: 'Full Name',
+  email: 'E-mail',
+  emails: 'E-mails',
+  phone: 'Phone',
+  phones: 'Phones',
+  subject: 'Subject',
+  message: 'Message',
+  send: 'Send',
+  whereUsAre: 'Where Us Are',
+  address: 'Address',
+  food: 'Food',
+  hygiene: 'Hygiene',
+  accessories: 'Accessories',
+  all: 'All'
 }

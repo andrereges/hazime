@@ -1,19 +1,19 @@
 <template>
-  <div class="q-pa-md">
+  <q-page class="q-pa-md">
     <div class="row justify-center">
       <q-card class="my-card col-12">
         <q-card-section>
           <q-form @submit="onSubmit" class="q-gutter-md">
-            <div class="text-h4">Fale Conosco</div>
-            <div class="text-caption">Preencha o formulário abaixo e o mais breve possível retornaremos o contato</div>
+            <div class="text-h4">{{ $t('contact') }}</div>
+            <div class="text-caption">{{ $t('formContactMessage') }}</div>
 
             <q-separator />
 
             <q-input
-              ref="nome"
+              ref="name"
               filled
-              v-model="nome"
-              label="Nome Completo*"
+              v-model="name"
+              :label="this.$t('fullName') + '*'"
               lazy-rules
               :rules="[ val => val && val.length > 0 || 'O nome é obrigatório']"
             />
@@ -21,7 +21,7 @@
             <q-input
               ref="email"
               v-model="email"
-              label="E-mail*"
+              :label="this.$t('email') + '*'"
               filled
               type="email"
               lazy-rules
@@ -29,35 +29,35 @@
             />
 
             <q-input
-              ref="telefone"
+              ref="phone"
               filled
-              v-model="telefone"
-              label="Telefone"
+              v-model="phone"
+              :label="this.$t('phone')"
               mask="(##) ##### - ####"
               fill-mask
               type="tel"
             />
 
             <q-input
-              ref="assunto"
+              ref="subject"
               filled
-              v-model="assunto"
-              label="Assunto*"
+              v-model="subject"
+              :label="this.$t('subject') + '*'"
               lazy-rules
               :rules="[ val => val && val.length > 0 || 'O assunto é obrigatório']"
             />
 
             <q-input
-              v-model="mensagem"
+              v-model="message"
               filled
-              label="Mensagem*"
+              :label="this.$t('message') + '*'"
               type="textarea"
               lazy-rules
               :rules="[ val => val && val.length > 0 || 'A mensagem é obrigatória' ]"
             />
 
             <q-card-actions>
-              <q-btn glossy label="Enviar" color="green" class="full-width" type="submit" />
+              <q-btn glossy :label="this.$t('send')" color="green" class="full-width" type="submit" />
             </q-card-actions>
 
           </q-form>
@@ -68,7 +68,7 @@
     <div class="row">
       <q-card class="my-card row onde-estamos col-12">
         <q-card-section class="col-12">
-          <q-item-label class="text-h4">Onde Estamos</q-item-label>
+          <q-item-label class="text-h4">{{ $t('whereUsAre') }}</q-item-label>
         </q-card-section>
         <q-card-section class="col-12">
           <iframe
@@ -80,7 +80,7 @@
         <q-card-section class="col-12">
           <q-item>
             <q-item-section>
-              <q-item-label class="text-subtitle2">Endereço</q-item-label>
+              <q-item-label class="text-subtitle2">{{ this.$t('address') }}</q-item-label>
               <q-item-label>Rua Corneteiro de Jesus, 370</q-item-label>
               <q-item-label>Água Fria / São Paulo-SP</q-item-label>
               <q-item-label>CEP: 02336-030</q-item-label>
@@ -89,7 +89,7 @@
 
           <q-item>
             <q-item-section>
-              <q-item-label class="text-subtitle2">Telefones</q-item-label>
+              <q-item-label class="text-subtitle2">{{ this.$t('phones') }}</q-item-label>
               <q-item-label>
                 +55 (11) 9 9706-4004 <img src="~/assets/icons/whatsapp.png" style="with:15px; height:15px" />
               </q-item-label>
@@ -100,7 +100,7 @@
 
           <q-item>
             <q-item-section>
-              <q-item-label class="text-subtitle2">E-mails</q-item-label>
+              <q-item-label class="text-subtitle2">{{ this.$t('emails') }}</q-item-label>
               <q-item-label>vendas.sonne@gmail.com</q-item-label>
               <q-item-label>hazimebaby@terra.com.br</q-item-label>
               <q-item-label>sac.sonne@hotmail.com</q-item-label>
@@ -109,7 +109,7 @@
         </q-card-section>
       </q-card>
     </div>
-  </div>
+  </q-page>
 </template>
 
 <script>
@@ -117,11 +117,11 @@ export default {
   name: 'PageFaleConosco',
   data () {
     return {
-      nome: '',
+      name: '',
       email: '',
-      telefone: '',
-      assunto: '',
-      mensagem: ''
+      phone: '',
+      subject: '',
+      message: ''
     }
   },
   methods: {

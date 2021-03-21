@@ -5,17 +5,15 @@ const routes = [
     component: () => import('layouts/MainLayout.vue'),
     children: [
       { path: '', component: () => import('pages/Home.vue') },
-      { path: 'quem-somos', component: () => import('pages/QuemSomos.vue') },
-      { path: 'fale-conosco', component: () => import('pages/FaleConosco.vue') }
+      { path: 'about-us', component: () => import('src/pages/AboutUs.vue') },
+      { path: 'contact', component: () => import('pages/Contact.vue') }
     ]
   },
   {
-    path: '/produtos',
+    path: '/products',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: 'alimentacao', component: () => import('pages/ProdutosAlimentacao.vue') },
-      { path: 'higiene', component: () => import('pages/ProdutosHigiene.vue') },
-      { path: 'acessorios', component: () => import('pages/ProdutosAcessorios.vue') }
+      { path: '', component: () => import('pages/Product.vue') }
     ]
   },
 
