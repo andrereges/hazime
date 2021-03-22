@@ -100,7 +100,7 @@
             <q-item-section>
               <q-item-label class="text-subtitle2">{{ this.$t('phones') }}</q-item-label>
               <q-item-label>
-                +55 (11) 9 9706-4004 <img src="~/assets/icons/whatsapp.png" style="with:15px; height:15px" />
+                +55 (11) 9 9706-4004 <img src="~/assets/icons/whatsapp.png" style="with: 1em; height: 1em" />
               </q-item-label>
               <q-item-label>+55 (11) 2204-3004</q-item-label>
               <q-item-label>+55 (11) 2204-1153</q-item-label>
@@ -151,12 +151,12 @@ export default {
     sendEmail () {
       return `
         ${process.env.EMAIL}
-        ?subject=${this.subject}
+        ?subject=${escape(this.subject)}
         &body=<p><b>Nome:</b> ${this.name}</p>
         <p><b>Telefone:</b> ${this.phone}</p>
         <p><b>Email:</b> ${this.email}</p>
         <p><b>Mensagem:</b></p>
-        <p>${this.message}</p>
+        <p>${escape(this.message)}</p>
         <br><br>
         <p><b>Site: ${window.location.origin}</b></p>`
     }

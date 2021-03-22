@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <q-page padding>
 
     <carousel />
 
-    <q-page padding>
+    <div class="content">
 
       <p>
         Pensando nas mamães de primeira viagem, que não tiveram ou que não
@@ -73,9 +73,9 @@
         </p>
       </div>
 
-    </q-page>
+    </div>
 
-  </div>
+  </q-page>
 </template>
 
 <script>
@@ -91,5 +91,8 @@ export default {
 <style scoped>
   .text-subtitle2 {
     vertical-align: middle;
+  }
+  .content {
+    margin-top: 30px
   }
 </style>

@@ -7,7 +7,7 @@
     <q-toolbar class="row items-center no-wrap">
 
       <div class="col-2">
-        <img src="~/assets/hazime-logo.png" class="logo-footer"/>
+        <img src="~/assets/logo/hazime-logo.png" class="logo-footer"/>
       </div>
 
       <div class="col-10 text-right">
@@ -83,7 +83,7 @@ export default {
   }
 
   .logo-footer {
-    width: 80px;
-    height: 40px;
+    width: 8em;
+    height: 3em;
   }
 </style>

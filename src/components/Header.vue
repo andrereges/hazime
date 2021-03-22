@@ -2,10 +2,10 @@
   <q-header class="header">
 
     <q-toolbar class="justify-center">
-      <img alt="Logo" src="~assets/sonne-logo.png" width="200px">
+      <img alt="Logo" src="~assets/logo/sonne-logo.png" width="200em">
     </q-toolbar>
 
-    <q-toolbar class="bg-purple glossy text-white q-my-md shadow-2">
+    <q-toolbar class="bg-purple glossy text-white q-mt-md shadow-2 justify-center">
 
       <button-header
         title="home"
@@ -13,7 +13,7 @@
         link='/'
       />
 
-      <q-space />
+      <q-space v-show="this.$q.platform.is.mobile" />
 
       <button-dropdown-header
         title="products"
@@ -45,7 +45,9 @@
         v-show="false"
       />
 
-      <q-btn flat icon="menu" v-show="this.$q.platform.is.mobile">
+      <q-space v-show="this.$q.platform.is.mobile" />
+
+      <q-btn flat icon="menu" class="" v-show="this.$q.platform.is.mobile">
         <q-menu
           transition-show="jump-down"
           transition-hide="jump-up"
@@ -107,8 +109,9 @@ export default {
 
 <style scoped>
   .header {
-    background-image: url('~assets/background/bg.jpg');
+    background-image: url('~assets/background/bg-mascotes.png');
     background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 20px;
   }
 </style>

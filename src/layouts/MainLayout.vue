@@ -27,21 +27,20 @@ export default {
 
 <style>
   .bg-image {
-    background-image: url('~assets/background/bg.jpg');
-    background-repeat: repeat;
-    width: 100%;
-    height: 100%;
+    background-image: url('~assets/background/bg-mascotes2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .img-icon {
-    margin-right: 5px;
-    width: 32px;
-    height: 32px;
+    margin-right: 0.5em;
+    width: 2em;
+    height: 2em;
   }
 
   .img-favicon {
-    width: 20px;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
   }
 
   .uppercase {
