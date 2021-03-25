@@ -1,0 +1,194 @@
+[
+    {
+        "id": 1,
+        "name": "Colher Sonne",
+        "reference": "5600",
+        "description": "",
+        "image": "colher_sonne_ref5600.jpeg",
+        "category": 3
+    },
+    {
+        "id": 2,
+        "name": "Copo Sonne Azul",
+        "reference": "5602",
+        "description": "",
+        "image": "copo_sonne_azul_ref5602.jpeg",
+        "category": 3
+    },
+    {
+        "id": 3,
+        "name": "Kit Alimentação Azul",
+        "reference": "5601",
+        "description": "",
+        "image": "kit_alimentacao_azul_ref5601.jpeg",
+        "category": 3
+    },
+    {
+        "id": 4,
+        "name": "Kit Alimentação Rosa",
+        "reference": "5601",
+        "description": "",
+        "image": "kit_alimentacao_rosa_ref5601.jpeg",
+        "category": 3
+    },
+    {
+        "id": 5,
+        "name": "Kit Alimentação Verde Menina",
+        "reference": "5601",
+        "description": "",
+        "image": "kit_alimentacao_verde_menina_ref5601.jpeg",
+        "category": 3
+    },
+    {
+        "id": 6,
+        "name": "Kit Alimentação Verde",
+        "reference": "5601",
+        "description": "",
+        "image": "kit_alimentacao_verde_ref5601.jpeg",
+        "category": 3
+    },
+    {
+        "id": 7,
+        "name": "Kit Banho Azul",
+        "reference": "6601",
+        "description": "",
+        "image": "kit_banho_azul_ref6601.jpeg",
+        "category": 4
+    },
+    {
+        "id": 8,
+        "name": "Kit Banho Rosa",
+        "reference": "6601",
+        "description": "",
+        "image": "kit_banho_rosa_ref6601.jpeg",
+        "category": 4
+    },
+    {
+        "id": 9,
+        "name": "Penta e Escova Azul",
+        "reference": "6600",
+        "description": "",
+        "image": "pente_escova_azul_ref6600.jpeg",
+        "category": 4
+    },
+    {
+        "id": 10,
+        "name": "Pente e Escova Rosa",
+        "reference": "6600",
+        "description": "",
+        "image": "pente_escova_rosa_ref6600.jpeg",
+        "category": 4
+    },
+    {
+        "id": 11,
+        "name": "Porta Chupetas Azul",
+        "reference": "5515/1",
+        "description": "",
+        "image": "porta_chupetas_azul_ref5515_1.jpeg",
+        "category": 2
+    },
+    {
+        "id": 12,
+        "name": "Porta Chupetas Rosa",
+        "reference": "5515/1",
+        "description": "",
+        "image": "porta_chupetas_rosa_ref5515_1.jpeg",
+        "category": 2
+    },
+    {
+        "id": 13,
+        "name": "Porta Leite Azul",
+        "reference": "5510/1",
+        "description": "",
+        "image": "porta_leite_azul_ref5510_1.jpeg",
+        "category": 2
+    },
+    {
+        "id": 14,
+        "name": "Porta Leite Rosa",
+        "reference": "5510/1",
+        "description": "",
+        "image": "porta_leite_rosa_ref5510_1.jpeg",
+        "category": 2
+    },
+    {
+        "id": 15,
+        "name": "Protetor Mamilo",
+        "reference": "5004",
+        "description": "",
+        "image": "protetor_mamilo_ref5004.jpeg",
+        "category": 2
+    },
+    {
+        "id": 16,
+        "name": "Saboneteira Luxo Azul",
+        "reference": "5501/1",
+        "description": "",
+        "image": "saboneteira_luxo_azul_ref5501_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 17,
+        "name": "Saboneteira Luxo Rosa",
+        "reference": "5501/1",
+        "description": "",
+        "image": "saboneteira_luxo_rosa_ref5501_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 18,
+        "name": "Saboneteira Luxo Transparente Menina",
+        "reference": "5501/1",
+        "description": "",
+        "image": "saboneteira_luxo_transparente_menina_ref5501_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 19,
+        "name": "Saboneteira Luxo Transparente Menino",
+        "reference": "5501/1",
+        "description": "",
+        "image": "saboneteira_luxo_transparente_menino_ref5501_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 20,
+        "name": "Saboneteira Pop Azul",
+        "reference": "5500/1",
+        "description": "",
+        "image": "saboneteira_pop_azul_ref5500_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 21,
+        "name": "Saboneteira Pop Branca Menina",
+        "reference": "5500/1",
+        "description": "",
+        "image": "saboneteira_pop_branco_menina_ref5500_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 22,
+        "name": "Saboneteira Pop Branca Menino",
+        "reference": "5500/1",
+        "description": "",
+        "image": "saboneteira_pop_branco_menino_ref5500_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 23,
+        "name": "Saboneteira Pop Rosa",
+        "reference": "5500/1",
+        "description": "",
+        "image": "saboneteira_pop_rosa_ref5500_1.jpeg",
+        "category": 4
+    },
+    {
+        "id": 24,
+        "name": "Saboneteira Pop Verde",
+        "reference": "5500/1",
+        "description": "",
+        "image": "saboneteira_pop_verde_ref5500_1.jpeg",
+        "category": 4
+    }      
+]

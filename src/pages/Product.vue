@@ -1,35 +1,46 @@
 <template>
   <q-page>
-    <div class="text-h3 text-center">{{ $t('products') }} - {{ $t(title) }}</div>
-    <div class="q-pa-md justify-evenly row">
-      <product-card
-        v-model="products"
-        v-for="product in products"
-        :key="product.id"
-        v-bind="product"
-      />
+    <div class="q-pa-md text-h3 text-center">{{ $t('products') }} - {{ category.name }}</div>
+      <div class="q-pa-md justify-evenly row">
+        <q-card
+          class="my-card col-sm-3"
+          v-model="products"
+          v-for="product in products"
+          :key="product.id"
+          v-bind="product"
+        >
+
+        <img :ratio="1" :src="getImage(product.image)" height="350em">
+
+        <q-card-section>
+          <div class="text-h6" v-text="product.name"></div>
+          <div class="text-caption" v-text="'REF: ' + product.reference"></div>
+        </q-card-section>
+
+        <q-card-section class="q-pt-none">
+          <q-item-label v-text="product.description"></q-item-label>
+        </q-card-section>
+
+      </q-card>
     </div>
   </q-page>
 </template>
 
 <script>
 
-import ProductCard from 'src/components/ProductCard.vue'
-import food from '../assets/products-json/food'
-import hygiene from '../assets/products-json/hygiene'
-import accessories from '../assets/products-json/accessories'
+import dbProducts from '../assets/db-json/products.json'
+import dbCategories from '../assets/db-json/categories.json'
 
 export default {
-  components: { ProductCard },
   name: 'PageProduct',
   data () {
     return {
       products: [],
-      title: ''
+      category: []
     }
   },
   watch: {
-    '$route.query.type': function () {
+    '$route.query.category': function () {
       this.getProducts()
     }
   },
@@ -37,23 +48,22 @@ export default {
     this.getProducts()
   },
   methods: {
+    getImage (image) {
+      return require(`../assets/product-images/${image}`)
+    },
     getProducts () {
-      this.products = []
-      this.title = this.$route.query.type
+      let categoryId = 1
 
-      switch (this.title) {
-        case 'food':
-          this.products = food
-          break
-        case 'hygiene':
-          this.products = hygiene
-          break
-        case 'accessories':
-          this.products = accessories
-          break
-        default:
-          this.products = food.concat(hygiene).concat(accessories)
-          break
+      if (this.$route.query.category) {
+        categoryId = this.$route.query.category
+      }
+
+      this.category = dbCategories.filter(c => c.id === Number.parseInt(categoryId))[0]
+
+      if (Number.parseInt(categoryId) !== 1) {
+        this.products = dbProducts.filter(p => p.category === Number.parseInt(categoryId))
+      } else {
+        this.products = dbProducts
       }
     }
   }
@@ -64,6 +74,7 @@ export default {
   .my-card {
     margin: 0  1px  20px  0;
     padding: 1px;
+    background-color: white;
   }
   .my-card:hover {
     transform: scale(1.01);

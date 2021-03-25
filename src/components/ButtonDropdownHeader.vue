@@ -15,24 +15,16 @@
     </template>
 
     <q-list class="uppercase">
-        <q-item clickable v-close-popup @click="onClick('all')" >
+        <q-item
+          v-for="category in categories"
+          :key="category.id"
+          v-bind="category"
+          clickable
+          v-close-popup
+          @click="onClick(category.id)"
+        >
           <q-item-section>
-            <q-item-label>{{ $t('all') }}</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable v-close-popup @click="onClick('food')" >
-          <q-item-section>
-            <q-item-label>{{ $t('food') }}</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable v-close-popup @click="onClick('hygiene')" >
-          <q-item-section>
-            <q-item-label>{{ $t('hygiene') }}</q-item-label>
-          </q-item-section>
-        </q-item>
-        <q-item clickable v-close-popup @click="onClick('accessories')" >
-          <q-item-section>
-            <q-item-label>{{ $t('accessories') }}</q-item-label>
+            <q-item-label v-text="category.name" />
           </q-item-section>
         </q-item>
     </q-list>
@@ -41,8 +33,17 @@
 </template>
 
 <script>
+
+import categories from '../assets/db-json/categories.json'
+
 export default {
   name: 'Header',
+  data () {
+    return {
+      categories: categories,
+      category: 1
+    }
+  },
   props: {
     title: {
       type: String,
@@ -59,8 +60,8 @@ export default {
     }
   },
   methods: {
-    onClick (parameter) {
-      this.$router.replace('/products?type=' + parameter)
+    onClick (category) {
+      this.$router.replace('/products?category=' + category)
     }
   }
 }

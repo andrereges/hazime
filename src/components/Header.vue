@@ -109,7 +109,7 @@ export default {
 
 <style scoped>
   .header {
-    background-image: url('~assets/background/bg-mascotes.png');
+    background-image: url('~assets/background/bg-mascotes2.png');
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px;
