@@ -13,9 +13,6 @@
     height="20em"
     class="carousel shadow-2"
   >
-    <!-- <q-carousel-slide class="slide" :name="1" img-src="~/assets/carousel/car1.jpg" />
-    <q-carousel-slide class="slide" :name="2" img-src="~/assets/carousel/car2.jpg" />
-    <q-carousel-slide class="slide" :name="3" img-src="~/assets/carousel/car3.jpg" /> -->
     <q-carousel-slide class="slide" :name="1" img-src="~/assets/carousel/girafas.jpeg" />
     <q-carousel-slide class="slide" :name="2" img-src="~/assets/carousel/pes.jpeg" />
   </q-carousel>
