@@ -43,6 +43,5 @@ export default {
   }
   .slide {
     background-size: 100% 100%;
-    background-repeat: no-repeat;
   }
 </style>>

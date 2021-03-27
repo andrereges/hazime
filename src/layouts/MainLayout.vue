@@ -27,7 +27,7 @@ export default {
 
 <style>
   .bg-image {
-    background-image: url('~assets/background/bg-mascotes2.png');
+    background-image: url('~assets/background/bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }

@@ -16,28 +16,6 @@
           flat
           type="a"
           target="_blank"
-          :href="'tel:' + phone"
-        >
-          <q-item-label>
-            <img src="~/assets/icons/customer-care.svg" class="img-icon" />
-          </q-item-label>
-        </q-btn>
-
-        <q-btn
-          flat
-          type="a"
-          target="_blank"
-          :href="'mailto:' + email"
-        >
-          <q-item-label>
-            <img src="~/assets/icons/email.png" class="img-icon" />
-          </q-item-label>
-        </q-btn>
-
-        <q-btn
-          flat
-          type="a"
-          target="_blank"
           :href="whatsapp"
         >
           <q-item-label>

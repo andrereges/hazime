@@ -190,5 +190,150 @@
         "description": "",
         "image": "saboneteira_pop_verde_ref5500_1.jpeg",
         "category": 4
-    }      
+    },
+    {
+        "id": 25,
+        "name": "Prendedor Master Menino",
+        "reference": "5603",
+        "description": "",
+        "image": "prendedor_master_menino_ref5603.jpeg",
+        "category": 2
+    },
+    {
+        "id": 26,
+        "name": "Prendedor Master Menina",
+        "reference": "5603",
+        "description": "",
+        "image": "prendedor_master_menina_ref5603.jpeg",
+        "category": 2
+    },
+    {
+        "id": 27,
+        "name": "Prendedor Corrente Azul",
+        "reference": "5616",
+        "description": "",
+        "image": "prendedor_corrente_azul_ref5616.jpeg",
+        "category": 2
+    },
+    {
+        "id": 28,
+        "name": "Prendedor Corrente Rosa",
+        "reference": "5616",
+        "description": "",
+        "image": "prendedor_corrente_rosa_ref5616.jpeg",
+        "category": 2
+    },
+    {
+        "id": 29,
+        "name": "Prendedor Corrente Branco Menina",
+        "reference": "5616",
+        "description": "",
+        "image": "prendedor_corrente_branco_menina_ref5616.jpeg",
+        "category": 2
+    },
+    {
+        "id": 30,
+        "name": "Prendedor Corrente Branco Menino",
+        "reference": "5616",
+        "description": "",
+        "image": "prendedor_corrente_branco_menino_ref5616.jpeg",
+        "category": 2
+    },
+    {
+        "id": 31,
+        "name": "Prendedor Boton Fita Rosa",
+        "reference": "5617",
+        "description": "",
+        "image": "prendedor_boton_fita_rosa_ref5617.jpeg",
+        "category": 2
+    },
+    {
+        "id": 32,
+        "name": "Prendedor Boton Fita Branco Menino",
+        "reference": "5617",
+        "description": "",
+        "image": "prendedor_boton_fita_branco_menino_ref5617.jpeg",
+        "category": 2
+    },
+    {
+        "id": 33,
+        "name": "Prendedor Boton Fita Branco",
+        "reference": "5617",
+        "description": "",
+        "image": "prendedor_boton_fita_branco_ref5617.jpeg",
+        "category": 2
+    },
+    {
+        "id": 34,
+        "name": "Prendedor Boton Fita Azul",
+        "reference": "5617",
+        "description": "",
+        "image": "prendedor_boton_fita_azul_ref5617.jpeg",
+        "category": 2
+    },
+    {
+        "id": 35,
+        "name": "Dedeira",
+        "reference": "6004",
+        "description": "",
+        "image": "dedeira_ref6004.jpeg",
+        "category": 2
+    },
+    {
+        "id": 36,
+        "name": "Prendedor Emoji Fita Rosa",
+        "reference": "5609",
+        "description": "",
+        "image": "prendedor_emoji_fita_menina_ref5609.jpeg",
+        "category": 2
+    },
+    {
+        "id": 37,
+        "name": "Prendedor Emoji Fita Azul",
+        "reference": "5609",
+        "description": "",
+        "image": "prendedor_emoji_fita_menino_ref5609.jpeg",
+        "category": 2
+    },
+    {
+        "id": 38,
+        "name": "Prendedor Emoji Corrente Rosa",
+        "reference": "5611",
+        "description": "",
+        "image": "prendedor_emoji_corrente_menina_ref5611.jpeg",
+        "category": 2
+    },
+    {
+        "id": 39,
+        "name": "Prendedor Corrente Luxo Rosa",
+        "reference": "5615",
+        "description": "",
+        "image": "prendedor_corrente_luxo_rosa_ref5615.jpeg",
+        "category": 2
+    },
+    {
+        "id": 40,
+        "name": "Prendedor Corrente Luxo Azul",
+        "reference": "5615",
+        "description": "",
+        "image": "prendedor_corrente_luxo_azul_ref5615.jpeg",
+        "category": 2
+    },
+    {
+        "id": 41,
+        "name": "Prendedor Luxo Fita Rosa",
+        "reference": "5613",
+        "description": "",
+        "image": "prendedor_luxo_fita_rosa_ref5613.jpeg",
+        "category": 2
+    },
+    {
+        "id": 42,
+        "name": "Prendedor Luxo Fita Azul",
+        "reference": "5613",
+        "description": "",
+        "image": "prendedor_luxo_fita_azul_ref5613.jpeg",
+        "category": 2
+    }
+
 ]

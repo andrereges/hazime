@@ -25,7 +25,7 @@ export default {
 
     link: {
       type: String,
-      default: '#'
+      default: ''
     },
     show: {
       type: String,
