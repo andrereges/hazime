@@ -9,66 +9,63 @@
         <div :class="divText">
 
           <p class="text-subtitle2">
-            Pensando nas mamães de primeira viagem, que não tiveram ou que não
-            leram muito sobre a maternidade durante a gravidez a SONNE separou alguns
-            conselhos que as mamães precisam saber!
+            Pensando nas mamães de primeira viagem,separamos algumas dicas que possam ser úteis para as mamães.
           </p>
 
           <p>
             <q-img src="~/assets/icons/favicon.png" class="img-favicon"/>
-            <span class="text-subtitle2"> Os primeiros meses são bem cansativos</span>
+            <span class="text-subtitle2"> Aceite ajuda</span>
           </p>
 
           <p>
-            Nosso corpo não está acostumado a acordar no meio da noite e
-            isso realmente nos deixa muito cansadas! Você acordará à noite para amamentar e muitas
-            vezes essas noites serão eternas… Mas acredite: isso vai passar! Você vai demorar para
-            dormir como antes, talvez nunca mais, rsrsrs… Mas seu corpo vai se acostumar a acordar mais
-            cedo do que antes e parece que não precisará mais de tantas horas de sono. Calma, vai passar!
+            É muito comum que uma mãe de primeira viagem queira fazer tudo e queira ficar
+            100% do tempo dedicada ao bebê.
           </p>
 
           <p>
-            <q-img src="~/assets/icons/favicon.png" class="img-favicon"/>
-            <span class="text-subtitle2"> Curta intensamente cada momento do seu bebê</span>
-          </p>
-
-          <p>
-            Vejo muitas mães querendo que passe logo a fase bebê para que a criança comece logo a interagir,
-            mas tente aproveitar cada fase, pois passa tão rápido e é um tempo que nunca voltará. Seu bebê vai
-            crescer em uma velocidade impressionante e você vai perceber isso também na quantidade de roupas que
-            ele perderá, então, procure não comprar muitas coisas no enxoval.
+            É importante entender, porém, que bebês dão trabalho, sendo necessário pedir e aceitar ajuda.
+            Você acabou de sair do hospital com um recém nascido e sua  vida está prestes a mudar.
+            Conte com seus familiares e o papai também pode ajudar para que você não sobrecarregue.
           </p>
 
           <p>
             <q-img src="~/assets/icons/favicon.png" class="img-favicon"/>
-            <span class="text-subtitle2"> Escolha um pediatra que lhe transmita confiança</span>
+            <span class="text-subtitle2"> Crie uma rotina com o bebê</span>
           </p>
 
           <p>
-            Nós, mães, apesar no nosso instinto materno, temos várias inseguranças e dúvidas nos primeiros
-            meses do bebê, por isso é importante que você escolha um pediatra que sinta confiança e que deixe você
-            à vontade para ligar e perguntar tudo que quiser.
-          </p>
-
-          <p>
-            <q-img src="~/assets/icons/favicon.png" class="img-favicon"/>
-            <span class="text-subtitle2"> Crie uma rotina para o bebê</span>
-          </p>
-
-          <p>
-            O bebê precisa sim de rotina! Tente criar uma rotina simples no início, colocando o mesmo horário
-            para o banho, sonequinhas e hora de dormir. Isso gera confiança nele, o que faz com que fique mais
-            calmo e menos irritado.
+            Criar uma rotina com o bebê é fundamental a fim de que você possa otimizar o seu tempo e
+            consiga dar conta de tudo. Em função disso, é importante dormir quando o bebê dorme, definir
+            horário de banho, refeições, passeios, sonecas e visitas familiares.
           </p>
 
           <p>
             <q-img src="~/assets/icons/favicon.png" class="img-favicon"/>
-            <span class="text-subtitle2"> Suas prioridades vão mudar e sua forma de pensar também</span>
+            <span class="text-subtitle2"> Cuide de você também</span>
           </p>
 
           <p>
-            Filhos nos fazem seres humanos melhores. O que um filho faz por você nenhuma outra experiência faz.
-            Nada a modificará de forma tão permanente como um filho.
+            Lembre-se de que é fundamental cuidar de você também.
+            Alimente-se corretamente, durma sempre que puder e procure separar um tempo para você.
+          </p>
+
+          <p>
+            <q-img src="~/assets/icons/favicon.png" class="img-favicon"/>
+            <span class="text-subtitle2"> Divida as responsabilidades com o pai</span>
+          </p>
+
+          <p>
+            As responsabilidades de cuidar de um bebê não devem ser apenas da mãe. Engaje o pai do
+            bebê nas atividades tanto para que você possa descansar, quanto para que o pai e o bebê
+            possam criar um vínculo.
+          </p>
+
+          <p class="text-subtitle2">
+            Bebês choram! Mas quando sorriem você esquece tudo.
+          </p>
+
+          <p class="text-subtitle2">
+            Curta cada momento, pois eles são únicos e o tempo voa.
           </p>
 
         </div>

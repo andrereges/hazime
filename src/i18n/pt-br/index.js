@@ -13,7 +13,7 @@ export default {
   subject: 'Assunto',
   message: 'Mensagem',
   send: 'Enviar',
-  whereUsAre: 'Onde Estamos',
+  whereUsAre: 'ONDE ESTAMOS',
   address: 'Endereço',
   food: 'Alimentação',
   hygiene: 'Higiene',

@@ -1,8 +1,8 @@
 {
   "name": "hazime",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Hazime/Sonne",
+  "description": "Hazime Sonne é uma empresa que atua no ramo de puericultura fabricante de chupetas, mamadeiras, bicos de chupetas e outros acessórios para bebês.",
+  "productName": "Hazime / Sonne",
   "author": "Andrê Reges <dreeh.silva@hotmail.com>",
   "private": true,
   "scripts": {

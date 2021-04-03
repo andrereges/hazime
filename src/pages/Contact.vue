@@ -1,81 +1,14 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="row justify-center">
-      <q-card class="my-card col-12">
-        <q-card-section>
-          <q-form @submit.prevent.stop="onSubmit" class="q-gutter-md">
-            <div class="text-h4">{{ $t('contact') }}</div>
-            <div class="text-caption">{{ $t('formContactMessage') }}</div>
-
-            <q-separator />
-
-            <q-input
-              ref="name"
-              filled
-              v-model="name"
-              :label="this.$t('fullName') + '*'"
-              lazy-rules
-              :rules="[ val => val && val.length > 0 || 'O nome é obrigatório']"
-            />
-
-            <q-input
-              ref="email"
-              v-model="email"
-              :label="this.$t('email') + '*'"
-              filled
-              type="email"
-              lazy-rules
-              :rules="[ val => val && val.length > 0 || 'O e-mail é obrigatório']"
-            />
-
-            <q-input
-              ref="phone"
-              filled
-              v-model="phone"
-              :label="this.$t('phone')"
-              mask="(##) ##### - ####"
-              fill-mask
-              type="tel"
-            />
-
-            <q-input
-              ref="subject"
-              filled
-              v-model="subject"
-              :label="this.$t('subject') + '*'"
-              lazy-rules
-              :rules="[ val => val && val.length > 0 || 'O assunto é obrigatório']"
-            />
-
-            <q-input
-              v-model="message"
-              filled
-              :label="this.$t('message') + '*'"
-              type="textarea"
-              lazy-rules
-              :rules="[ val => val && val.length > 0 || 'A mensagem é obrigatória' ]"
-            />
-
-            <q-card-actions>
-              <q-btn
-                glossy
-                color="green"
-                class="full-width"
-                :label="this.$t('send')"
-                :type="type"
-                target="_blank"
-                :href="'mailto:' + sendEmail"
-                :disable="!disableButton"
-              />
-            </q-card-actions>
-
-          </q-form>
-        </q-card-section>
+    <div class="row justify-center" >
+      <q-card class="my-card" :class="mobileClass" :style="mobileStyle">
+        <iframe src="https://form.jotform.com/203364204216040"
+          style="min-width: 100%; height: 990px; border: none;"></iframe>
       </q-card>
     </div>
 
-    <div class="row">
-      <q-card class="my-card row onde-estamos col-12">
+    <div class="row justify-center">
+      <q-card class="my-card row" :class="mobileClass" style="margin-top: 20px;">
         <q-card-section class="col-12">
           <q-item-label class="text-h4">{{ $t('whereUsAre') }}</q-item-label>
         </q-card-section>
@@ -126,55 +59,15 @@ export default {
   name: 'PageFaleConosco',
   data () {
     return {
-      name: '',
-      email: '',
-      phone: '',
-      subject: '',
-      message: ''
+      mobileClass: 'col-6',
+      mobileStyle: 'height: 62em'
     }
   },
-  computed: {
-    type () {
-      if (this.subject && this.name && this.email && this.message) {
-        return 'a'
-      }
-
-      return ''
-    },
-    disableButton () {
-      if (this.subject && this.name && this.email && this.message) {
-        return true
-      }
-
-      return false
-    },
-    sendEmail () {
-      return `
-        ${process.env.EMAIL}
-        ?subject=${escape(this.subject)}
-        &body=<p><b>Nome:</b> ${this.name}</p>
-        <p><b>Telefone:</b> ${this.phone}</p>
-        <p><b>Email:</b> ${this.email}</p>
-        <p><b>Mensagem:</b></p>
-        <p>${escape(this.message)}</p>
-        <br><br>
-        <p><b>Site: ${window.location.origin}</b></p>`
-    }
-  },
-  methods: {
-    onSubmit () {
-      console.log('Form Subimitted')
+  created () {
+    if (this.$q.platform.is.mobile) {
+      this.mobileClass = 'col-12'
+      this.mobileStyle = 'height: 64em'
     }
   }
 }
 </script>
-
-<style scoped>
-  .my-card {
-    background: radial-gradient(circle, #ffff 0%, #ffff 100%);
-  }
-
-  .onde-estamos {
-    margin-top: 20px;
-  }
-</style>

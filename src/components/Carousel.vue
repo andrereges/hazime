@@ -15,6 +15,10 @@
   >
     <q-carousel-slide class="slide" :name="1" img-src="~/assets/carousel/girafas.jpeg" />
     <q-carousel-slide class="slide" :name="2" img-src="~/assets/carousel/pes.jpeg" />
+    <q-carousel-slide class="slide" :name="3" img-src="~/assets/carousel/c2.jpeg" />
+    <q-carousel-slide class="slide" :name="4" img-src="~/assets/carousel/c3.jpeg" />
+    <q-carousel-slide class="slide" :name="5" img-src="~/assets/carousel/c4.jpeg" />
+    <q-carousel-slide class="slide" :name="6" img-src="~/assets/carousel/c1.jpeg" />
   </q-carousel>
 </template>
 
