@@ -18,5 +18,21 @@ export default {
   food: 'Alimentação',
   hygiene: 'Higiene',
   accessories: 'Acessórios',
-  all: 'Todos'
+  category: 'Categoria',
+  categories: 'Categorias',
+  color: 'Cor',
+  colors: 'Cores',
+  gender: 'Gênero',
+  genders: 'Gêneros',
+  babyBottleAndPacifierNipples: 'Bicos de Mamadeira e Chupeta',
+  uninformed: 'Não informado',
+  typeSearch: 'Digite sua pesquisa',
+  blue: 'Azul',
+  pink: 'Rosa',
+  white: 'Branco',
+  transparent: 'Transparente',
+  green: 'Verde',
+  male: 'Masculino',
+  female: 'Feminino',
+  unisex: 'Unissex'
 }

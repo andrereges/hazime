@@ -13,7 +13,7 @@ const routes = [
     path: '/products',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/Product.vue') }
+      { path: '', component: () => import('src/pages/Product.vue') }
     ]
   },
 

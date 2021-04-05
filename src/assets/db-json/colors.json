@@ -4,19 +4,23 @@
         "name": "uninformed"
     },
     {
+        "id": 2,
+        "name": "blue"
+    },
+    {
         "id": 3,
-        "name": "accessories"
+        "name": "white"
     },
     {
         "id": 4,
-        "name": "food"
+        "name": "pink"
     },
     {
         "id": 5,
-        "name": "hygiene"
+        "name": "transparent"
     },
     {
         "id": 6,
-        "name": "babyBottleAndPacifierNipples"
+        "name": "green"
     }
 ]

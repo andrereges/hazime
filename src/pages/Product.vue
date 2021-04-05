@@ -1,18 +1,18 @@
 <template>
   <q-page>
-    <div class="q-pa-md text-h3 text-center">{{ category[0].name }}</div>
-    <div class="q-pa-md row justify-center">
+    <div class="q-pa-md text-h3 text-center"></div>
+    <div class="q-pa-md row justify-evenly">
 
-       <q-input
+      <q-input
         outlined
+        filled
         bottom-slots
         v-model="search"
-        label="Nome do Produto"
-        counter
         maxlength="30"
-        :dense="dense"
+        color="purple-12"
+        :label="$t('typeSearch')"
         bg-color="white"
-        style="width: 100%"
+        :class="this.$q.screen.width  < '900' ? 'col-12' : 'col-5'"
       >
 
         <template v-slot:append>
@@ -22,16 +22,59 @@
 
       </q-input>
 
+      <q-select
+        clearable
+        multiple
+        filled
+        outlined
+        use-chips
+        stack-label
+        bg-color="white"
+        color="purple-12"
+        v-model="choiceCategories"
+        :options="categories"
+        :option-value="opt => Object(opt) === opt && 'id' in opt ? opt.id : ''"
+        :option-label="opt => Object(opt) === opt && 'name' in opt ? $t(opt.name) : ''"
+        :label="$t('categories')"
+        :class="this.$q.screen.width  < '900' ? 'col-12' : 'col-5'"
+        style="margin-bottom: 1em"
+      />
+
     </div>
+
     <div class="q-pa-md justify-evenly row">
       <q-card
         class="my-card col-sm-3"
-        v-for="product in FiltedProducts"
-        :key="product.id"
+        v-for="product in products"
+        :key="product.reference"
         v-bind="product"
       >
+        <q-carousel
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          v-model="product.slide"
+          swipeable
+          animated
+          arrows
+          navigation
+          :control-color="product.images.length > 1 ? 'purple-5' : 'transparent'"
+        >
+          <q-carousel-slide
+            :name="index"
+            v-for="(image, index) in product.images"
+            :key="index"
+            v-bind="image"
+          >
+            <img :ratio="1" :src="getImage(image.name)" height="350em" width="100%" />
+          </q-carousel-slide>
 
-        <img :ratio="1" :src="getImage(product.image)" height="350em">
+          <q-carousel-slide :name="product.images.length + 1" v-if="product.sticker">
+            <img :ratio="1" src="~/assets/product-labels/sticker-male.jpeg" height="350em" width="100%" />
+          </q-carousel-slide>
+          <q-carousel-slide :name="product.images.length + 2" v-if="product.sticker">
+            <img :ratio="1" src="~/assets/product-labels/sticker-female.jpeg" height="350em" width="100%" />
+          </q-carousel-slide>
+        </q-carousel>
 
         <q-card-section>
           <div class="text-h6" v-text="product.name"></div>
@@ -45,7 +88,7 @@
       </q-card>
     </div>
     <div class="text-center">
-      <div class="text-h6" v-show="categoryId != 5">
+      <div class="text-h6">
         <span>Bicos de Mamadeira e Chupeta</span>
       </div>
       <div class="text-bold">
@@ -54,7 +97,6 @@
       </div>
 
       <q-img src="~/assets/others/ministeriodasaude.png" :style="this.$q.platform.is.desktop ? 'width: 50%' : ''" />
-
     </div>
   </q-page>
 </template>
@@ -68,43 +110,44 @@ export default {
   name: 'PageProduct',
   data () {
     return {
-      products: [],
-      category: [],
-      categoryId: 1,
+      products: dbProducts,
+      categories: dbCategories,
+      choiceCategories: [],
       search: '',
-      dense: false
-    }
-  },
-  computed: {
-    FiltedProducts () {
-      const text = this.search.toLocaleLowerCase()
-      return this.products.filter(p => p.name.toLocaleLowerCase().indexOf(text) > -1)
+      dense: false,
+      carousel: false
     }
   },
   watch: {
-    '$route.query.category': function () {
-      this.getProducts()
+    choiceCategories: function () {
+      this.filterProducts()
+    },
+    search: function () {
+      this.filterProducts()
     }
   },
   created () {
-    this.getProducts()
+    this.filterProducts()
   },
   methods: {
     getImage (image) {
-      return require(`../assets/product-images/${image}`)
+      if (image) {
+        return require(`../assets/product-images/${image}`)
+      }
     },
-    getProducts () {
-      if (this.$route.query.category) {
-        this.categoryId = this.$route.query.category
+    filterProducts () {
+      this.products = dbProducts
+
+      if (Array.isArray(this.choiceCategories) && this.choiceCategories.length) {
+        this.products = dbProducts.filter(p => this.choiceCategories.map(item => item.id).includes(p.category))
       }
 
-      this.category = dbCategories.filter(c => c.id === Number.parseInt(this.categoryId))
-
-      if (Number.parseInt(this.categoryId) !== 1) {
-        this.products = dbProducts.filter(p => p.category === Number.parseInt(this.categoryId))
-      } else {
-        this.products = dbProducts
+      if (this.search) {
+        const text = this.search.toLocaleLowerCase()
+        this.products = this.products.filter(p => p.name.toLocaleLowerCase().indexOf(text) > -1)
       }
+
+      this.products = this.products.map(v => ({ ...v, slide: 0 }))
     }
   }
 }
@@ -113,7 +156,6 @@ export default {
 <style scoped>
   .my-card {
     margin: 0  1px  20px  0;
-    padding: 1px;
     background-color: white;
   }
   .my-card:hover {

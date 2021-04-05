@@ -18,5 +18,17 @@ export default {
   food: 'Food',
   hygiene: 'Hygiene',
   accessories: 'Accessories',
-  all: 'All'
+  category: 'category',
+  categories: 'categories',
+  babyBottleAndPacifierNipples: 'Baby bottle and pacifier nipples',
+  uninformed: 'Uninformed',
+  typeSearch: 'Type your search',
+  blue: 'Blue',
+  pink: 'Pink',
+  white: 'White',
+  transparent: 'Transparent',
+  green: 'Green',
+  male: 'Male',
+  female: 'Female',
+  unisex: 'Unisex'
 }

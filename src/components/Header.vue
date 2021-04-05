@@ -15,9 +15,10 @@
 
       <q-space v-show="this.$q.platform.is.mobile" />
 
-      <button-dropdown-header
+      <button-header
         title="products"
         iconName='product-lauch.svg'
+        link='/products'
       />
 
       <button-header
@@ -80,12 +81,11 @@
 </template>
 
 <script>
-import ButtonDropdownHeader from './ButtonDropdownHeader.vue'
 import ButtonHeader from './ButtonHeader.vue'
 
 export default {
   name: 'Header',
-  components: { ButtonHeader, ButtonDropdownHeader },
+  components: { ButtonHeader },
   data () {
     return {
       isDesktop: this.$q.platform.is.desktop,
