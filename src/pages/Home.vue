@@ -8,8 +8,8 @@
       <div class="row">
         <div :class="divText">
 
-          <p class="text-subtitle2">
-            Pensando nas mamães de primeira viagem,separamos algumas dicas que possam ser úteis para as mamães.
+          <p class="text-h6">
+            Pensando nas mamães de primeira viagem, separamos algumas dicas que possam ser úteis
           </p>
 
           <p>

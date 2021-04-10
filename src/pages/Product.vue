@@ -1,6 +1,5 @@
 <template>
   <q-page>
-    <div class="q-pa-md text-h3 text-center"></div>
     <div class="q-pa-md row justify-evenly">
 
       <q-input
@@ -12,7 +11,7 @@
         color="purple-12"
         :label="$t('typeSearch')"
         bg-color="white"
-        :class="this.$q.screen.width  < '900' ? 'col-12' : 'col-5'"
+        :class="$q.screen.width < '900' ? 'col-12' : 'col-5'"
       >
 
         <template v-slot:append>
@@ -36,7 +35,7 @@
         :option-value="opt => Object(opt) === opt && 'id' in opt ? opt.id : ''"
         :option-label="opt => Object(opt) === opt && 'name' in opt ? $t(opt.name) : ''"
         :label="$t('categories')"
-        :class="this.$q.screen.width  < '900' ? 'col-12' : 'col-5'"
+        :class="$q.screen.width < '900' ? 'col-12' : 'col-5'"
         style="margin-bottom: 1em"
       />
 
@@ -44,7 +43,7 @@
 
     <div class="q-pa-md justify-evenly row">
       <q-card
-        class="my-card col-sm-3"
+        :class="$q.screen.width < '900' ? 'my-card col-12' : 'my-card col-4'"
         v-for="product in products"
         :key="product.reference"
         v-bind="product"
@@ -55,10 +54,22 @@
           v-model="product.slide"
           swipeable
           animated
+          :autoplay="product.autoplay"
+          infinite
           arrows
           navigation
           :control-color="product.images.length > 1 ? 'purple-5' : 'transparent'"
         >
+
+        <template v-slot:control v-if="product.sticker">
+          <q-carousel-control
+            position="top-left"
+            :offset="[18, 18]"
+          >
+            <q-toggle dense dark color="purple-5" v-model="product.autoplay" />
+            <q-tooltip content-class="bg-accent">Auto Slide</q-tooltip>
+          </q-carousel-control>
+        </template>
           <q-carousel-slide
             :name="index"
             v-for="(image, index) in product.images"
@@ -68,20 +79,21 @@
             <img :ratio="1" :src="getImage(image.name)" height="350em" width="100%" />
           </q-carousel-slide>
 
-          <q-carousel-slide :name="product.images.length + 1" v-if="product.sticker">
-            <img :ratio="1" src="~/assets/product-labels/sticker-male.jpeg" height="350em" width="100%" />
-          </q-carousel-slide>
-          <q-carousel-slide :name="product.images.length + 2" v-if="product.sticker">
-            <img :ratio="1" src="~/assets/product-labels/sticker-female.jpeg" height="350em" width="100%" />
-          </q-carousel-slide>
         </q-carousel>
 
         <q-card-section>
           <div class="text-h6" v-text="product.name"></div>
-          <div class="text-caption" v-text="'REF: ' + product.reference"></div>
+          <div class="text-caption row">
+            <div class="col-6 text-left">
+              <q-item-label>{{'REF: ' + product.reference }}</q-item-label>
+            </div>
+            <div class="col-6 text-right" v-if="product.sticker">
+              <q-btn size="12px" glossy color="purple" @click="showDialog">Mais Opções</q-btn>
+            </div>
+          </div>
         </q-card-section>
 
-        <q-card-section class="q-pt-none">
+        <q-card-section class="q-pt-none" v-if="product.description">
           <q-item-label v-text="product.description"></q-item-label>
         </q-card-section>
 
@@ -92,12 +104,52 @@
         <span>Bicos de Mamadeira e Chupeta</span>
       </div>
       <div class="text-bold">
-        <p>Prezado consumidor, a Hazime é fabricante de bicos e chupetas, porém a exibição desses produtos em nosso site é vedada conforme a LEI 11.265/06.</p>
-        <p>Qualquer informação ou dúvida sobre esses produtos Hazime, por favor, entrar em contato através do nosso serviço de atendimento ao consumidor.</p>
+        <p>Prezado consumidor, a Sonne é fabricante de bicos e chupetas, porém a exibição desses produtos em nosso site é vedada conforme a LEI 11.265/06.</p>
+        <p>Dúvidas ou informações sobre nossos produtos, solicitação de nosso catálogo estamos à disposição no fale conosco, whatsapp e instagram.</p>
+        <p>A Sonne agradece sua preferência.</p>
       </div>
 
       <q-img src="~/assets/others/ministeriodasaude.png" :style="this.$q.platform.is.desktop ? 'width: 50%' : ''" />
     </div>
+
+    <q-dialog v-model="dialog">
+      <q-card>
+        <q-carousel
+          transition-prev="slide-right"
+          transition-next="slide-left"
+          swipeable
+          animated
+          v-model="dialogSlide"
+          infinite
+        >
+          <q-carousel-slide name="sticker1-m">
+            <img :ratio="1" src="~/assets/product-stickers/sticker1-m.jpeg" height="350em" width="100%" />
+          </q-carousel-slide>
+          <q-carousel-slide name="sticker2-m">
+            <img :ratio="1" src="~/assets/product-stickers/sticker2-m.jpeg" height="350em" width="100%" />
+          </q-carousel-slide>
+          <q-carousel-slide name="sticker1-f">
+            <img :ratio="1" src="~/assets/product-stickers/sticker1-f.jpeg" height="350em" width="100%" />
+          </q-carousel-slide>
+          <q-carousel-slide name="sticker2-f">
+            <img :ratio="1" src="~/assets/product-stickers/sticker2-f.jpeg" height="350em" width="100%" />
+          </q-carousel-slide>
+        </q-carousel>
+
+        <div class="row justify-center">
+          <q-btn-toggle
+            glossy
+            v-model="dialogSlide"
+            :options="[
+              { label: 1, value: 'sticker1-m' },
+              { label: 2, value: 'sticker2-m' },
+              { label: 3, value: 'sticker1-f' },
+              { label: 4, value: 'sticker2-f' }
+            ]"
+          />
+        </div>
+      </q-card>
+    </q-dialog>
   </q-page>
 </template>
 
@@ -115,7 +167,8 @@ export default {
       choiceCategories: [],
       search: '',
       dense: false,
-      carousel: false
+      dialog: false,
+      dialogSlide: 'sticker1-m'
     }
   },
   watch: {
@@ -130,6 +183,10 @@ export default {
     this.filterProducts()
   },
   methods: {
+    showDialog () {
+      this.dialogSlide = 'sticker1-m'
+      this.dialog = !this.dialog
+    },
     getImage (image) {
       if (image) {
         return require(`../assets/product-images/${image}`)
@@ -147,7 +204,7 @@ export default {
         this.products = this.products.filter(p => p.name.toLocaleLowerCase().indexOf(text) > -1)
       }
 
-      this.products = this.products.map(v => ({ ...v, slide: 0 }))
+      this.products = this.products.map(v => ({ ...v, slide: 0, autoplay: true }))
     }
   }
 }
@@ -155,11 +212,7 @@ export default {
 
 <style scoped>
   .my-card {
-    margin: 0  1px  20px  0;
+    margin: 0  1px  30px  0;
     background-color: white;
-  }
-  .my-card:hover {
-    transform: scale(1.01);
-    box-shadow: 1px 1px 1px 1px rgb(192, 192, 192);
   }
 </style>

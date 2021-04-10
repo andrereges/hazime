@@ -35,7 +35,9 @@
               <q-item-label>
                 +55 (11) 9 9706-4004 <img src="~/assets/icons/whatsapp.png" style="with: 1em; height: 1em" />
               </q-item-label>
-              <q-item-label>+55 (11) 2204-3004</q-item-label>
+              <q-item-label>
+                +55 (11) 2204-3004 <img src="~/assets/icons/whatsapp.png" style="with: 1em; height: 1em" />
+              </q-item-label>
               <q-item-label>+55 (11) 2204-1153</q-item-label>
             </q-item-section>
           </q-item>

@@ -4,14 +4,17 @@
     elevated
     class="footer text-purple"
   >
-    <q-toolbar class="row items-center no-wrap">
+    <q-toolbar class="row justify-around">
 
-      <div class="col-2">
+      <div class="col-4">
         <img src="~/assets/logo/hazime-logo.png" class="logo-footer"/>
       </div>
 
-      <div class="col-10 text-right">
+      <div class="col-3 text-center">
+        Copyright &copy; 2021
+      </div>
 
+      <div class="col-5 text-right">
         <q-btn
           flat
           type="a"
@@ -47,9 +50,7 @@ export default {
   data () {
     return {
       instagram: process.env.INSTAGRAM,
-      whatsapp: process.env.WHATSAPP,
-      email: process.env.EMAIL,
-      phone: process.env.PHONE
+      whatsapp: process.env.WHATSAPP
     }
   }
 }

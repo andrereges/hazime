@@ -1,17 +1,189 @@
 [
     {
-        "reference": "5600",
-        "name": "Colher Sonne",        
+        "reference": "5004",
+        "name": "Protetor Mamilo",        
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "protetor_mamilo_embalagem_ref5004.jpeg",
+                "color": 5,
+                "gender": 4
+            },
+            {
+                "name": "protetor_mamilo_ref5004.jpeg",
+                "color": 5,
+                "gender": 4
+            }
+        ],
+        "category": 3
+    },
+    {
+        "reference": "6004",
+        "name": "Dedeira",
         "description": "",
         "sticker": false,
         "images": [
             {
-                "name": "colher_sonne_ref5600.jpeg",
+                "name": "dedeira_ref6004.jpeg",
+                "color": 5,
+                "gender": 4
+            }
+        ],
+        "category": 3
+    },
+    {
+        "reference": "5617",
+        "name": "Prendedor Boton Fita",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "prendedor_boton_fita_azul_ref5617.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_boton_fita_rosa_ref5617.jpeg",
+                "color": 4,
+                "gender": 3
+            },
+            {
+                "name": "prendedor_boton_fita_branco_menino_ref5617.jpeg",
+                "color": 3,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_boton_fita_branco_ref5617.jpeg",
+                "color": 3,
+                "gender": 3
+            }
+        ],
+        "category": 3
+    },
+    {
+        "reference": "5616",
+        "name": "Prendedor Boton Corrente",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "prendedor_corrente_azul_ref5616.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_corrente_rosa_ref5616.jpeg",
+                "color": 4,
+                "gender": 3
+            },
+            {
+                "name": "prendedor_corrente_branco_menino_ref5616.jpeg",
+                "color": 3,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_corrente_branco_menina_ref5616.jpeg",
+                "color": 3,
+                "gender": 2
+            }
+        ],
+        "category": 3
+    },
+    {
+        "reference": "5603",
+        "name": "Prendedor Master",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "prendedor_master_menino_ref5603.jpeg",
+                "color": 3,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_master_menina_ref5603.jpeg",
+                "color": 3,
+                "gender": 3
+            }
+        ],
+        "category": 3
+    },
+    {
+        "reference": "5613",
+        "name": "Prendedor Luxo Fita",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "prendedor_luxo_fita_azul_ref5613.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_luxo_fita_rosa_ref5613.jpeg",
                 "color": 4,
                 "gender": 3
             }
         ],
-        "category": 4
+        "category": 3
+    },
+    {
+        "reference": "5609",
+        "name": "Prendedor Emoji Fita",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "prendedor_emoji_fita_menino_ref5609.jpeg",
+                "color": 3,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_emoji_fita_menina_ref5609.jpeg",
+                "color": 3,
+                "gender": 3
+            }
+        ],
+        "category": 3
+    },
+    {
+        "reference": "5611",
+        "name": "Prendedor Emoji Corrente",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "prendedor_emoji_corrente_menino_ref5611.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_emoji_corrente_menina_ref5611.jpeg",
+                "color": 4,
+                "gender": 3
+            }
+        ],
+        "category": 2
+    },
+    {
+        "reference": "5615",
+        "name": "Prendedor Corrente Luxo",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "prendedor_corrente_luxo_azul_ref5615.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_corrente_luxo_rosa_ref5615.jpeg",
+                "color": 4,
+                "gender": 3
+            }
+        ],
+        "category": 3
     },
     {
         "reference": "5602",
@@ -28,23 +200,14 @@
                 "name": "copo_sonne_rosa_ref5602.jpeg",
                 "color": 4,
                 "gender": 3
+            },
+            {
+                "name": "copo_sonne_verde_ref5602.jpeg",
+                "color": 6,
+                "gender": 3
             }
         ],
         "category": 4
-    },
-    {
-        "reference": "6004",
-        "name": "Dedeira",
-        "description": "",
-        "sticker": false,
-        "images": [
-            {
-                "name": "dedeira_ref6004.jpeg",
-                "color": 5,
-                "gender": 4
-            }
-        ],
-        "category": 3
     },
     {
         "reference": "5601",
@@ -63,17 +226,50 @@
                 "gender": 3
             },
             {
-                "name": "kit_alimentacao_verde_ref5601.jpeg",
-                "color": 6,
-                "gender": 2
-            },
-            {
                 "name": "kit_alimentacao_verde_menina_ref5601.jpeg",
                 "color": 6,
                 "gender": 3
             }
         ],
         "category": 4
+    },
+    {
+        "reference": "5510",
+        "name": "Porta Leite",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "porta_leite_azul_ref5510_1.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "porta_leite_rosa_ref5510_1.jpeg",
+                "color": 4,
+                "gender": 3
+            }
+        ],
+        "category": 3
+    },
+    {
+        "reference": "5515",
+        "name": "Porta Chupetas",
+        "description": "",
+        "sticker": true,
+        "images": [
+            {
+                "name": "porta_chupetas_azul_ref5515_1.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "porta_chupetas_rosa_ref5515_1.jpeg",
+                "color": 4,
+                "gender": 3
+            }
+        ],
+        "category": 3
     },
     {
         "reference": "6601",
@@ -114,59 +310,7 @@
         "category": 5
     },
     {
-        "reference": "5515/1",
-        "name": "Porta Chupetas",
-        "description": "",
-        "sticker": true,
-        "images": [
-            {
-                "name": "porta_chupetas_azul_ref5515_1.jpeg",
-                "color": 2,
-                "gender": 2
-            },
-            {
-                "name": "porta_chupetas_rosa_ref5515_1.jpeg",
-                "color": 4,
-                "gender": 3
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5510/1",
-        "name": "Porta Leite",
-        "description": "",
-        "sticker": true,
-        "images": [
-            {
-                "name": "porta_leite_azul_ref5510_1.jpeg",
-                "color": 2,
-                "gender": 2
-            },
-            {
-                "name": "porta_leite_rosa_ref5510_1.jpeg",
-                "color": 4,
-                "gender": 3
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5004",
-        "name": "Protetor Mamilo",        
-        "description": "",
-        "sticker": false,
-        "images": [
-            {
-                "name": "protetor_mamilo_ref5004.jpeg",
-                "color": 5,
-                "gender": 4
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5501/1",
+        "reference": "5501",
         "name": "Saboneteira Luxo",        
         "description": "",
         "sticker": true,
@@ -195,7 +339,7 @@
         "category": 5
     },
     {
-        "reference": "5500/1",
+        "reference": "5500",
         "name": "Saboneteira Pop",
         "description": "",
         "sticker": true,
@@ -230,156 +374,17 @@
         "category": 5
     },
     {
-        "reference": "5603",
-        "name": "Prendedor Master",
-        "description": "",
-        "sticker": true,
-        "images": [
-            {
-                "name": "prendedor_master_menino_ref5603.jpeg",
-                "color": 3,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_master_menina_ref5603.jpeg",
-                "color": 3,
-                "gender": 3
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5616",
-        "name": "Prendedor Corrente",
-        "description": "",
-        "sticker": true,
-        "images": [
-            {
-                "name": "prendedor_corrente_azul_ref5616.jpeg",
-                "color": 2,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_corrente_rosa_ref5616.jpeg",
-                "color": 4,
-                "gender": 3
-            },
-            {
-                "name": "prendedor_corrente_branco_menino_ref5616.jpeg",
-                "color": 3,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_corrente_branco_menina_ref5616.jpeg",
-                "color": 3,
-                "gender": 2
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5617",
-        "name": "Prendedor Boton Fita",
-        "description": "",
-        "sticker": true,
-        "images": [
-            {
-                "name": "prendedor_boton_fita_azul_ref5617.jpeg",
-                "color": 2,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_boton_fita_rosa_ref5617.jpeg",
-                "color": 4,
-                "gender": 3
-            },
-            {
-                "name": "prendedor_boton_fita_branco_menino_ref5617.jpeg",
-                "color": 3,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_boton_fita_branco_ref5617.jpeg",
-                "color": 3,
-                "gender": 3
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5609",
-        "name": "Prendedor Emoji Fita",
+        "reference": "5600",
+        "name": "Colher Sonne",        
         "description": "",
         "sticker": false,
         "images": [
             {
-                "name": "prendedor_emoji_fita_menino_ref5609.jpeg",
-                "color": 3,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_emoji_fita_menina_ref5609.jpeg",
-                "color": 3,
-                "gender": 3
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5611",
-        "name": "Prendedor Emoji Corrente",
-        "description": "",
-        "sticker": false,
-        "images": [
-            {
-                "name": "prendedor_emoji_corrente_menino_ref5611.jpeg",
-                "color": 2,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_emoji_corrente_menina_ref5611.jpeg",
+                "name": "colher_sonne_ref5600.jpeg",
                 "color": 4,
                 "gender": 3
             }
         ],
-        "category": 2
-    },
-    {
-        "reference": "5615",
-        "name": "Prendedor Corrente Luxo",
-        "description": "",
-        "sticker": false,
-        "images": [
-            {
-                "name": "prendedor_corrente_luxo_azul_ref5615.jpeg",
-                "color": 2,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_corrente_luxo_rosa_ref5615.jpeg",
-                "color": 4,
-                "gender": 3
-            }
-        ],
-        "category": 3
-    },
-    {
-        "reference": "5613",
-        "name": "Prendedor Luxo Fita",
-        "description": "",
-        "sticker": false,
-        "images": [
-            {
-                "name": "prendedor_luxo_fita_azul_ref5613.jpeg",
-                "color": 2,
-                "gender": 2
-            },
-            {
-                "name": "prendedor_luxo_fita_rosa_ref5613.jpeg",
-                "color": 4,
-                "gender": 3
-            }
-        ],
-        "category": 3
+        "category": 4
     }
 ]

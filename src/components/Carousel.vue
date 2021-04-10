@@ -8,17 +8,20 @@
     arrows
     transition-prev="slide-right"
     transition-next="slide-left"
-    @mouseenter="autoplay = false"
+    @mouseenter="autoplay = true"
     @mouseleave="autoplay = true"
-    height="20em"
+    :height="this.$q.platform.is.desktop ? '35em' : '20em'"
     class="carousel shadow-2"
   >
-    <q-carousel-slide class="slide" :name="1" img-src="~/assets/carousel/girafas.jpeg" />
-    <q-carousel-slide class="slide" :name="2" img-src="~/assets/carousel/pes.jpeg" />
-    <q-carousel-slide class="slide" :name="3" img-src="~/assets/carousel/c2.jpeg" />
-    <q-carousel-slide class="slide" :name="4" img-src="~/assets/carousel/c3.jpeg" />
-    <q-carousel-slide class="slide" :name="5" img-src="~/assets/carousel/c4.jpeg" />
-    <q-carousel-slide class="slide" :name="6" img-src="~/assets/carousel/c1.jpeg" />
+
+    <q-carousel-slide
+      class="slide"
+      :name="index + 1"
+      v-for="(n, index) in 5"
+      :key="index"
+      :img-src="getImage(`${index + 1}.jpeg`)"
+    />
+
   </q-carousel>
 </template>
 
@@ -28,13 +31,14 @@ export default {
   data () {
     return {
       slide: 1,
-      autoplay: true,
-      video1: 'video1.mp4'
+      autoplay: true
     }
   },
-  computed: {
-    getVideo () {
-      return this.video1 ? require(`../assets/carousel/${this.video1}`) : ''
+  methods: {
+    getImage (image) {
+      if (image) {
+        return require(`../assets/carousel/${image}`)
+      }
     }
   }
 }
@@ -43,7 +47,7 @@ export default {
 <style scoped>
   .carousel {
     border: solid 1px;
-    border-color: purple;
+    border-color: rgba(161, 147, 147, 0.863);
   }
   .slide {
     background-size: 100% 100%;

@@ -31,8 +31,9 @@
         <span class="text-h6"> Qualidade</span>
       </p>
 
+      <p>Com objetivo de melhorarmos sempre o atendimento aos nossos clientes, a Sonne tem como compromisso:</p>
+
       <ul>
-        <li>Com objetivo de melhorarmos sempre o atendimento aos nossos clientes, a HAZIME, tem como compromisso.</li>
         <li>Valorizar e dar efetivo tratamento as reclamações apresentadas por seus clientes.</li>
         <li>conhecer e comprometer-se a cumprir e sujeitar-se ás penalidades previstas nas leis, especificamente na Lei n 8078/1990.</li>
         <li>Analisar criticamente os resultados, bem como tomar as providências devidas, em função das reclamações recebidas; definir responsabilidades quanto ao tratamento das reclamações.</li>
