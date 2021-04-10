@@ -1,9 +1,9 @@
 <template>
   <q-page class="q-pa-md">
     <div class="row justify-center" >
-      <q-card class="my-card" :class="mobileClass" :style="mobileStyle">
+      <q-card class="my-card" style="margin-bottom: 30px;" :class="mobileClass" :style="mobileStyle">
         <iframe src="https://form.jotform.com/203364204216040"
-          style="min-width: 100%; height: 990px; border: none;"></iframe>
+          style="min-width: 100%; height: 1000px; border: none;"></iframe>
       </q-card>
     </div>
 
