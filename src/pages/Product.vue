@@ -109,11 +109,15 @@
         <p>A Sonne agradece sua preferência.</p>
       </div>
 
-      <q-img src="~/assets/others/ministeriodasaude.png" :style="this.$q.platform.is.desktop ? 'width: 50%' : ''" />
-    </div>
+      <div class="q-pa-md row justify-center">
+        <div :class="$q.screen.width < '900' ? 'col-12' : 'col-6'">
+          <q-img src="~/assets/others/ministeriodasaude.png" />
+        </div>
+      </div>
 
+    </div>
     <q-dialog v-model="dialog">
-      <q-card>
+      <q-card style="width: 100%">
         <q-carousel
           transition-prev="slide-right"
           transition-next="slide-left"
