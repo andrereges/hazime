@@ -6,12 +6,9 @@
   >
     <q-toolbar class="row justify-around">
 
-      <div class="col-4">
+      <div class="col-7">
         <img src="~/assets/logo/hazime-logo.png" class="logo-footer"/>
-      </div>
-
-      <div class="col-3 text-center">
-        Copyright &copy; 2021
+        &copy; 2021 - V1.0
       </div>
 
       <div class="col-5 text-right">

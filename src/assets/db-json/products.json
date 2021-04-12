@@ -3,7 +3,7 @@
         "reference": "5004",
         "name": "Protetor Mamilo",        
         "description": "",
-        "sticker": true,
+        "sticker": false,
         "images": [
             {
                 "name": "protetor_mamilo_embalagem_ref5004.jpeg",

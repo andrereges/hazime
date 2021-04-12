@@ -1,5 +1,5 @@
 <template>
-  <q-header class="header">
+  <q-header class="header" reveal>
 
     <q-toolbar class="justify-center">
       <img alt="Logo" src="~assets/logo/sonne-logo.png" width="200em">

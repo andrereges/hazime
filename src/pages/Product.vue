@@ -61,7 +61,7 @@
           :control-color="product.images.length > 1 ? 'purple-5' : 'transparent'"
         >
 
-        <template v-slot:control v-if="product.sticker">
+        <template v-slot:control v-if="product.images.length > 1">
           <q-carousel-control
             position="top-left"
             :offset="[18, 18]"
