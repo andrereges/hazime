@@ -99,17 +99,15 @@
 
       </q-card>
     </div>
-    <div class="text-center">
-      <div class="text-h6">
-        <span>Bicos de Mamadeira e Chupeta</span>
-      </div>
-      <div class="text-bold">
-        <p>Prezado consumidor, a Sonne é fabricante de bicos e chupetas, porém a exibição desses produtos em nosso site é vedada conforme a LEI 11.265/06.</p>
-        <p>Dúvidas ou informações sobre nossos produtos, solicitação de nosso catálogo estamos à disposição no fale conosco, whatsapp e instagram.</p>
-        <p>A Sonne agradece sua preferência.</p>
-      </div>
+    <div class="q-pa-md text-center">
 
-      <div class="q-pa-md row justify-center">
+      <p class="text-h6">Bicos de Mamadeira e Chupeta</p>
+
+      <p>Prezado consumidor, a Sonne é fabricante de bicos e chupetas, porém a exibição desses produtos em nosso site é vedada conforme a LEI 11.265/06.</p>
+      <p>Dúvidas ou informações sobre nossos produtos, solicitação de nosso catálogo estamos à disposição no fale conosco, whatsapp e instagram.</p>
+      <p>A Sonne agradece sua preferência.</p>
+
+      <div class="row justify-center">
         <div :class="$q.screen.width < '900' ? 'col-12' : 'col-6'">
           <q-img src="~/assets/others/ministeriodasaude.png" />
         </div>

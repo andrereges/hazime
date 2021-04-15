@@ -25,6 +25,11 @@
         "sticker": false,
         "images": [
             {
+                "name": "dedeira_embalagem_ref6004.jpeg",
+                "color": 5,
+                "gender": 4
+            },
+            {
                 "name": "dedeira_ref6004.jpeg",
                 "color": 5,
                 "gender": 4
@@ -113,7 +118,7 @@
         "reference": "5613",
         "name": "Prendedor Luxo Fita",
         "description": "",
-        "sticker": true,
+        "sticker": false,
         "images": [
             {
                 "name": "prendedor_luxo_fita_azul_ref5613.jpeg",
@@ -132,7 +137,7 @@
         "reference": "5609",
         "name": "Prendedor Emoji Fita",
         "description": "",
-        "sticker": true,
+        "sticker": false,
         "images": [
             {
                 "name": "prendedor_emoji_fita_menino_ref5609.jpeg",
@@ -151,7 +156,7 @@
         "reference": "5611",
         "name": "Prendedor Emoji Corrente",
         "description": "",
-        "sticker": true,
+        "sticker": false,
         "images": [
             {
                 "name": "prendedor_emoji_corrente_menino_ref5611.jpeg",
@@ -170,7 +175,7 @@
         "reference": "5615",
         "name": "Prendedor Corrente Luxo",
         "description": "",
-        "sticker": true,
+        "sticker": false,
         "images": [
             {
                 "name": "prendedor_corrente_luxo_azul_ref5615.jpeg",
