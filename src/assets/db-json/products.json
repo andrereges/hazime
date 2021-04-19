@@ -140,12 +140,22 @@
         "sticker": false,
         "images": [
             {
-                "name": "prendedor_emoji_fita_menino_ref5609.jpeg",
-                "color": 3,
+                "name": "prendedor_emoji_fita_azul_ref5609.jpeg",
+                "color": 2,
                 "gender": 2
             },
             {
-                "name": "prendedor_emoji_fita_menina_ref5609.jpeg",
+                "name": "prendedor_emoji_fita_azul_escuro_ref5609.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_emoji_fita_rosa_ref5609.jpeg",
+                "color": 4,
+                "gender": 3
+            },
+            {
+                "name": "prendedor_emoji_fita_branco_ref5609.jpeg",
                 "color": 3,
                 "gender": 3
             }
@@ -159,13 +169,23 @@
         "sticker": false,
         "images": [
             {
-                "name": "prendedor_emoji_corrente_menino_ref5611.jpeg",
+                "name": "prendedor_emoji_corrente_azul_ref5611.jpeg",
                 "color": 2,
                 "gender": 2
             },
             {
-                "name": "prendedor_emoji_corrente_menina_ref5611.jpeg",
+                "name": "prendedor_emoji_corrente_rosa_ref5611.jpeg",
                 "color": 4,
+                "gender": 3
+            },
+            {
+                "name": "prendedor_emoji_corrente_branco_menino_ref5611.jpeg",
+                "color": 3,
+                "gender": 2
+            },
+            {
+                "name": "prendedor_emoji_corrente_branco_menina_ref5611.jpeg",
+                "color": 3,
                 "gender": 3
             }
         ],

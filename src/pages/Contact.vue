@@ -1,22 +1,10 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="row justify-center" >
-      <q-card
-        :class="$q.screen.width < '900' || $q.screen.width < '900' ? 'col-12' : 'col-6'"
-        :style="$q.screen.width < '900' ? 'height: 64em' : 'height: 62em'"
-        class="my-card"
-        style="margin-bottom: 30px;"
-      >
-        <iframe src="https://form.jotform.com/203364204216040"
-          style="min-width: 100%; height: 1000px; border: none;"></iframe>
-      </q-card>
-    </div>
-
     <div class="row justify-center">
       <q-card
         :class="$q.screen.width < '900' ? 'col-12' : 'col-6'"
         class="my-card row"
-        style="margin-top: 20px;"
+        style="margin-bottom: 20px;"
       >
         <q-card-section class="col-12">
           <q-item-label class="text-h4">{{ $t('whereUsAre') }}</q-item-label>
@@ -62,22 +50,27 @@
         </q-card-section>
       </q-card>
     </div>
+
+    <div class="row justify-center" >
+      <q-card
+        :class="$q.screen.width < '900' || $q.screen.width < '900' ? 'col-12' : 'col-6'"
+        class="my-card"
+        style="height: 68em"
+      >
+        <iframe src="https://form.jotform.com/203364204216040"
+          ref="iframeContent"
+          style="min-width: 100%; height: 110%; border: none;"
+        ></iframe>
+      </q-card>
+    </div>
+
   </q-page>
 </template>
 <script>
 export default {
   name: 'PageFaleConosco',
   data () {
-    return {
-      // mobileClass: 'col-6',
-      // mobileStyle: 'height: 62em'
-    }
-  },
-  created () {
-    if (this.$q.platform.is.mobile) {
-      // this.mobileClass = 'col-12'
-      // this.mobileStyle = 'height: 64em'
-    }
+    return {}
   }
 }
 </script>

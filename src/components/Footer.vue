@@ -8,7 +8,7 @@
 
       <div class="col-7">
         <img src="~/assets/logo/hazime-logo.png" class="logo-footer"/>
-        &copy; 2021 - V1.0
+        &copy; 2021
       </div>
 
       <div class="col-5 text-right">
