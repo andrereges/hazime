@@ -10,8 +10,9 @@
     transition-next="slide-left"
     @mouseenter="autoplay = true"
     @mouseleave="autoplay = true"
-    :height="this.$q.platform.is.desktop ? '35em' : '20em'"
+    :height="$q.platform.is.desktop ? '35em' : '20em'"
     class="carousel shadow-2"
+    control-color="purple-5"
   >
 
     <q-carousel-slide
