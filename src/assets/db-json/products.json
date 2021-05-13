@@ -1,7 +1,7 @@
 [
     {
         "reference": "5004",
-        "name": "Protetor Mamilo",        
+        "name": "Protetor de Mamilo",        
         "description": "",
         "sticker": false,
         "images": [
@@ -270,7 +270,17 @@
                 "gender": 2
             },
             {
+                "name": "porta_leite_azul_ref5510_2.jpeg",
+                "color": 2,
+                "gender": 2
+            },
+            {
                 "name": "porta_leite_rosa_ref5510_1.jpeg",
+                "color": 4,
+                "gender": 3
+            },
+            {
+                "name": "porta_leite_rosa_ref5510_2.jpeg",
                 "color": 4,
                 "gender": 3
             }
@@ -317,7 +327,7 @@
     },
     {
         "reference": "6600",
-        "name": "Penta e Escova",
+        "name": "Pente e Escova",
         "description": "",
         "sticker": true,
         "images": [
